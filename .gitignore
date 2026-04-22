@@ -1,0 +1,79 @@
+# ================================
+# OhMyUniversity! — .gitignore
+# ================================
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# NODE / JS FILES
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+dist/
+build/
+out/
+
+# =========================
+# ENV FILES
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# LOG FILES
+# =========================
+*.log
+
+# =========================
+# IDE - VS CODE
+# =========================
+.vscode/*
+
+*.code-workspace
+
+# =========================
+# MARKDOWN / DOCS (SAFE RULES)
+# =========================
+
+# Temporary or working docs
+*.tmp.md
+*.draft.md
+*.bak.md
+
+# Exported or generated docs
+docs/_generated/
+docs/build/
+docs/dist/
+
+# Mermaid / diagram cache
+*.mmd.tmp
+*.mermaid.cache
+
+# =========================
+# ARCHITECTURE GENERATED ARTIFACTS
+# =========================
+architecture/_generated/
+architecture/build/
+architecture/cache/
+
+# =========================
+# TEST / DEBUG ARTIFACTS
+# =========================
+coverage/
+*.coverage
+
+# =========================
+# OPTIONAL: LOCAL NOTES (PERSONAL)
+# =========================
+notes/
+*.personal.md
