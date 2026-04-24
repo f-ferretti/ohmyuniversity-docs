@@ -40,12 +40,12 @@ export default defineConfig({
             text: 'Formal Documents',
             items: [
               {
-                text: '📋 RAD — Requirements & Analysis',
+                text: 'RAD - Requirements & Analysis',
                 link: '/project/rad/overview',
               },
-              { text: '🏗️ SDD — System Design', link: '/project/sdd/overview' },
+              { text: 'SDD - System Design', link: '/project/sdd/overview' },
               {
-                text: '⚙️ ODD — Operational Design',
+                text: 'ODD - Operational Design',
                 link: '/project/odd/overview',
               },
             ],
@@ -53,10 +53,10 @@ export default defineConfig({
           {
             text: 'Supporting Material',
             items: [
-              { text: '📐 UML Diagrams', link: '/project/uml/index' },
-              { text: '🧪 Test Plan', link: '/project/testing/test-plan' },
+              { text: 'UML Diagrams', link: '/project/uml/index' },
+              { text: 'Test Plan', link: '/project/testing/test-plan' },
               {
-                text: '📖 User Manual',
+                text: 'User Manual',
                 link: '/project/user-manual/getting-started',
               },
             ],
@@ -94,27 +94,27 @@ export default defineConfig({
       // ================================
       '/project/': [
         {
-          text: '📋 RAD — Requirements & Analysis',
+          text: 'RAD - Requirements & Analysis',
           link: '/project/rad/overview',
         },
         {
-          text: '🏗️ SDD — System Design',
+          text: 'SDD - System Design',
           link: '/project/sdd/overview',
         },
         {
-          text: '⚙️ ODD — Operational Design',
+          text: 'ODD - Operational Design',
           link: '/project/odd/overview',
         },
         {
-          text: '📐 UML Diagrams',
+          text: 'UML Diagrams',
           link: '/project/uml/index',
         },
         {
-          text: '🧪 Test Plan',
+          text: 'Test Plan',
           link: '/project/testing/test-plan',
         },
         {
-          text: '📖 User Manual',
+          text: 'User Manual',
           link: '/project/user-manual/getting-started',
         },
       ],
@@ -127,53 +127,141 @@ export default defineConfig({
           link: '/project/',
         },
         {
-          text: '📋 RAD',
-          items: [{ text: 'Overview', link: '/project/rad/overview' }],
-        },
-        {
-          text: 'Stakeholders & Actors',
-          collapsed: false,
-          items: [
-            { text: 'Stakeholders', link: '/project/rad/stakeholders' },
-            { text: 'System Actors', link: '/project/rad/actors' },
-            { text: 'User Personas', link: '/project/rad/user-personas' },
-          ],
-        },
-        {
-          text: 'Use Cases & Flows',
-          collapsed: false,
-          items: [
-            { text: 'Use Cases', link: '/project/rad/use-cases' },
-            { text: 'User Stories', link: '/project/rad/user-stories' },
-            { text: 'User Flows', link: '/project/rad/user-flows' },
-          ],
-        },
-        {
-          text: 'Requirements',
-          collapsed: false,
+          text: 'RAD - Requirements & Analysis',
           items: [
             {
-              text: 'Functional Requirements',
-              link: '/project/rad/functional-requirements',
-            },
-            {
-              text: 'Non-Functional Requirements',
-              link: '/project/rad/non-functional-requirements',
+              text: 'Overview',
+              link: '/project/rad/overview',
             },
           ],
         },
         {
-          text: 'UML Diagrams',
+          text: '1. Introduction',
           collapsed: true,
           items: [
             {
-              text: '↗ Use Case Diagram',
-              link: '/project/uml/use-case-diagram',
+              text: '1. Introduction',
+              link: '/project/rad/1-introduction/1-introduction',
             },
             {
-              text: '↗ Activity Diagrams',
-              link: '/project/uml/activity-diagrams',
+              text: '1.1 Purpose of the System',
+              link: '/project/rad/1-introduction/1-1-purpose-of-the-system',
             },
+            {
+              text: '1.2 Scope of the System',
+              link: '/project/rad/1-introduction/1-2-scope-of-the-system',
+            },
+            {
+              text: '1.3 Objectives & Success Criteria',
+              link: '/project/rad/1-introduction/1-3-objectives-and-success-criteria-of-the-project',
+            },
+            {
+              text: '1.4 Definitions, Acronyms & Abbreviations',
+              link: '/project/rad/1-introduction/1-4-definitions-acronyms-and-abbreviations',
+            },
+            {
+              text: '1.5 References',
+              link: '/project/rad/1-introduction/1-5-references',
+            },
+            {
+              text: '1.6 Overview',
+              link: '/project/rad/1-introduction/1-6-overview',
+            },
+          ],
+        },
+        {
+          text: '2. Current System',
+          collapsed: true,
+          items: [
+            {
+              text: '2. Current System',
+              link: '/project/rad/2-current-system/2-current-system',
+            },
+          ],
+        },
+        {
+          text: '3. Proposed System',
+          collapsed: true,
+          items: [
+            {
+              text: '3. Proposed System',
+              link: '/project/rad/3-proposed-system/3-proposed-system/3-proposed-system',
+            },
+            {
+              text: '3.1 Overview',
+              link: '/project/rad/3-proposed-system/3-1-overview',
+            },
+            {
+              text: '3.2 Functional Requirements',
+              link: '/project/rad/3-proposed-system/3-2-functional-requirements',
+            },
+            {
+              text: '3.3 Non-Functional Requirements',
+              link: '/project/rad/3-proposed-system/3-3-nonfunctional-requirements',
+            },
+            {
+              text: '3.3.1 Usability',
+              link: '/project/rad/3-proposed-system/3-3-1-usability',
+            },
+            {
+              text: '3.3.2 Reliability',
+              link: '/project/rad/3-proposed-system/3-3-2-reliability',
+            },
+            {
+              text: '3.3.3 Performance',
+              link: '/project/rad/3-proposed-system/3-3-3-performance',
+            },
+            {
+              text: '3.3.4 Supportability',
+              link: '/project/rad/3-proposed-system/3-3-4-supportability',
+            },
+            {
+              text: '3.3.5 Implementation',
+              link: '/project/rad/3-proposed-system/3-3-5-implementation',
+            },
+            {
+              text: '3.3.6 Interface',
+              link: '/project/rad/3-proposed-system/3-3-6-interface',
+            },
+            {
+              text: '3.3.7 Packaging',
+              link: '/project/rad/3-proposed-system/3-3-7-packaging',
+            },
+            {
+              text: '3.3.8 Legal',
+              link: '/project/rad/3-proposed-system/3-3-8-legal',
+            },
+            {
+              text: '3.4 System Models',
+              link: '/project/rad/3-proposed-system/3-4-system-models',
+            },
+            {
+              text: '3.4.1 Scenarios',
+              link: '/project/rad/3-proposed-system/3-4-1-scenarios',
+            },
+            {
+              text: '3.4.2 Use Case Model',
+              link: '/project/rad/3-proposed-system/3-4-2-use-case-model',
+            },
+            {
+              text: '3.4.3 Object Model',
+              link: '/project/rad/3-proposed-system/3-4-3-object-model',
+            },
+            {
+              text: '3.4.4 Dynamic Model',
+              link: '/project/rad/3-proposed-system/3-4-4-dynamic-model',
+            },
+            {
+              text: '3.4.5 UI-Navigational Paths & Screen Mockups',
+              link: '/project/rad/3-proposed-system/3-4-5-user-interface-navigational-paths-and-screen-mockups',
+            },
+          ],
+        },
+        {
+          text: '4. Glossary',
+          collapsed: true,
+          items: [
+            { text: '4. Glossary', link: '/project/rad/4-glossary/4-glossary' },
           ],
         },
       ],
@@ -187,7 +275,7 @@ export default defineConfig({
           link: '/project/',
         },
         {
-          text: '🏗️ SDD',
+          text: 'SDD',
           items: [{ text: 'Overview', link: '/project/sdd/overview' }],
         },
         {
@@ -220,11 +308,11 @@ export default defineConfig({
           items: [
             { text: 'ADR Index', link: '/project/sdd/adr/index' },
             {
-              text: 'ADR-001 — Database',
+              text: 'ADR-001 - Database',
               link: '/project/sdd/adr/adr-001-database',
             },
             {
-              text: 'ADR-002 — API Framework',
+              text: 'ADR-002 - API Framework',
               link: '/project/sdd/adr/adr-002-api-framework',
             },
             { text: 'Template', link: '/project/sdd/adr/adr-NNN-template' },
@@ -260,7 +348,7 @@ export default defineConfig({
           link: '/project/',
         },
         {
-          text: '⚙️ ODD',
+          text: 'ODD',
           items: [{ text: 'Overview', link: '/project/odd/overview' }],
         },
         {
@@ -298,7 +386,7 @@ export default defineConfig({
           link: '/project/',
         },
         {
-          text: '📐 UML Diagrams',
+          text: 'UML Diagrams',
           items: [{ text: 'Index', link: '/project/uml/index' }],
         },
         {
@@ -342,7 +430,7 @@ export default defineConfig({
           link: '/project/',
         },
         {
-          text: '🧪 Testing',
+          text: 'Testing',
           items: [
             { text: 'Test Plan', link: '/project/testing/test-plan' },
             { text: 'Test Strategy', link: '/project/testing/test-strategy' },
@@ -375,7 +463,7 @@ export default defineConfig({
           link: '/project/',
         },
         {
-          text: '📖 User Manual',
+          text: 'User Manual',
           items: [
             {
               text: 'Getting Started',

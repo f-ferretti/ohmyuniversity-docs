@@ -14,7 +14,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ---
 
-#### Persona 1 — Paolo Ferretti
+#### Persona 1 - Paolo Ferretti
 
 ![Paolo Ferretti](/personas/paolo.webp)
 
@@ -25,7 +25,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 | **Gender**           | Male                                                        |
 | **Role**             | Recent high-school graduate, prospective university student |
 | **Location**         | Small town, Central Italy                                   |
-| **Tech Proficiency** | Medium — comfortable with smartphones and social media      |
+| **Tech Proficiency** | Medium - comfortable with smartphones and social media      |
 
 **Goals**
 
@@ -53,7 +53,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ---
 
-#### Persona 2 — Opra Sharma
+#### Persona 2 - Opra Sharma
 
 ![Opra Sharma](/personas/opra.webp)
 
@@ -64,7 +64,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 | **Gender**           | Female                                                        |
 | **Role**             | International student, preparing for second-year enrollment   |
 | **Location**         | Northern Italy (recently relocated)                           |
-| **Tech Proficiency** | High — experienced with digital platforms and online research |
+| **Tech Proficiency** | High - experienced with digital platforms and online research |
 
 **Goals**
 
@@ -96,7 +96,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ---
 
-#### Persona 3 — Moreno Basile
+#### Persona 3 - Moreno Basile
 
 ![Moreno Basile](/personas/moreno.webp)
 
@@ -135,7 +135,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ---
 
-#### Persona 4 — Antonello Ruggieri
+#### Persona 4 - Antonello Ruggieri
 
 ![Antonello Ruggieri](/personas/antonello.webp)
 
@@ -146,7 +146,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 | **Gender**           | Male                                                     |
 | **Role**             | Retired adult learner pursuing an undergraduate degree   |
 | **Location**         | Central Italy                                            |
-| **Tech Proficiency** | Low — limited experience with digital academic platforms |
+| **Tech Proficiency** | Low - limited experience with digital academic platforms |
 
 **Goals**
 
@@ -178,7 +178,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ---
 
-#### Persona 5 — Vittoria Mancini
+#### Persona 5 - Vittoria Mancini
 
 ![Vittoria Mancini](/personas/vittoria.webp)
 
@@ -219,7 +219,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ## Macro-Category: Institution
 
-### Persona 6 — University / Academic Institution
+### Persona 6 - University / Academic Institution
 
 > _Detailed persona to be defined in a future iteration._
 
@@ -229,7 +229,7 @@ Representative role: university administrative staff, enrollment offices, and in
 
 ## Macro-Category: Academic Staff
 
-### Persona 7 — Academic / Lecturer
+### Persona 7 - Academic / Lecturer
 
 > _Detailed persona to be defined in a future iteration._
 
