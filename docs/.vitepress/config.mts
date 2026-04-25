@@ -1,9 +1,17 @@
 import { defineConfig } from 'vitepress';
+import {
+  ORGANIZATION,
+  REPOSITORY,
+  PROJECT_DOCS,
+  API_DOCS,
+  CREDITS,
+  COMMON_LINKS,
+  COMMON_TITLES,
+} from './constants';
 
 export default defineConfig({
-  title: 'OhMyUniversity!',
-  description:
-    'Open source University Data Platform by OhMyOpenSource! - Docs, API Reference & Project Specifications',
+  title: REPOSITORY.NAME,
+  description: `Open source University Data Platform by ${ORGANIZATION.NAME} - Docs, ${API_DOCS.MAIN_TITLE} & Project Specifications`,
   lang: 'en-US',
 
   srcDir: '.',
@@ -17,73 +25,155 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/omos-logo.png' }],
     ['meta', { name: 'theme-color', content: '#3451b2' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'OhMyUniversity! Docs' }],
+    ['meta', { property: 'og:title', content: REPOSITORY.NAME }],
     [
       'meta',
       {
         property: 'og:description',
-        content: 'Open Source University Data Platform',
+        content: `Open source University Data Platform by ${ORGANIZATION.NAME} - Docs, ${API_DOCS.MAIN_TITLE} & Project Specifications`,
       },
     ],
   ],
 
   themeConfig: {
     logo: '/omos-logo.png',
-    siteTitle: 'OhMyUniversity!',
+    siteTitle: REPOSITORY.NAME,
 
     // ================================
     // TOP NAVIGATION
     // ================================
     nav: [
+      // ================================
+      // Getting Started
+      // ================================
       {
-        text: 'Project',
-        activeMatch: '/project/',
+        text: COMMON_TITLES.GETTING_STARTED,
+        link: `/${COMMON_LINKS.GETTING_STARTED}/${COMMON_LINKS.OVERVIEW}`,
+      },
+
+      // ================================
+      // Architecture
+      // ================================
+      {
+        text: COMMON_TITLES.ARCHITECTURE,
+        link: `/architecture/${COMMON_LINKS.OVERVIEW}`,
+      },
+
+      // ================================
+      // Guides
+      // ================================
+      {
+        text: COMMON_TITLES.GUIDES,
+        link: `/${COMMON_LINKS.GUIDES}/data-sources-overview`,
+      },
+
+      // ================================
+      // Project Docs
+      // ================================
+      {
+        text: PROJECT_DOCS.MAIN_TITLE,
+        activeMatch: `${PROJECT_DOCS.BASE_URL}/`,
         items: [
+          {
+            text: `${PROJECT_DOCS.MAIN_TITLE} Overview`,
+            items: [
+              {
+                text: 'Overview',
+                link: `${PROJECT_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
+              },
+            ],
+          },
+
           {
             text: 'Formal Documents',
             items: [
               {
-                text: 'RAD - Requirements & Analysis',
-                link: '/project/rad/overview',
+                text: PROJECT_DOCS.RAD,
+                link: `${PROJECT_DOCS.BASE_URL}/rad/${COMMON_LINKS.OVERVIEW}`,
               },
-              { text: 'SDD - System Design', link: '/project/sdd/overview' },
               {
-                text: 'ODD - Operational Design',
-                link: '/project/odd/overview',
+                text: PROJECT_DOCS.SDD,
+                link: `${PROJECT_DOCS.BASE_URL}/sdd/${COMMON_LINKS.OVERVIEW}`,
+              },
+              {
+                text: PROJECT_DOCS.ODD,
+                link: `${PROJECT_DOCS.BASE_URL}/odd/${COMMON_LINKS.OVERVIEW}`,
               },
             ],
           },
           {
             text: 'Supporting Material',
             items: [
-              { text: 'UML Diagrams', link: '/project/uml/index' },
-              { text: 'Test Plan', link: '/project/testing/test-plan' },
+              {
+                text: 'UML Diagrams',
+                link: `${PROJECT_DOCS.BASE_URL}/uml/${COMMON_LINKS.OVERVIEW}`,
+              },
+              {
+                text: 'Test Plan',
+                link: `${PROJECT_DOCS.BASE_URL}/testing/test-plan`,
+              },
               {
                 text: 'User Manual',
-                link: '/project/user-manual/getting-started',
+                link: `${PROJECT_DOCS.BASE_URL}/user-manual/${COMMON_LINKS.OVERVIEW}`,
               },
             ],
           },
         ],
       },
-      { text: 'Getting Started', link: '/getting-started/overview' },
-      { text: 'Architecture', link: '/architecture/overview' },
+
+      // ================================
+      // API DOCS
+      // ================================
       {
-        text: 'API Reference',
+        text: API_DOCS.MAIN_TITLE,
+        activeMatch: `${API_DOCS.BASE_URL}/`,
         items: [
-          { text: 'API Index', link: '/api/api-index' },
-          { text: 'CINECA', link: '/api/cineca/overview' },
-          { text: 'MIUR', link: '/api/miur/overview' },
           {
-            text: 'European Data Portal',
-            link: '/api/european-data-portal/overview',
+            text: `${API_DOCS.MAIN_TITLE} Overview`,
+            items: [
+              {
+                text: 'Overview',
+                link: `${API_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
+              },
+              { text: 'Conventions', link: `${API_DOCS.BASE_URL}/conventions` },
+            ],
+          },
+
+          {
+            text: 'Internal APIs',
+            items: [
+              {
+                text: 'App Private APIs',
+                link: `${API_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
+              },
+            ],
+          },
+          {
+            text: 'External APIs',
+            items: [
+              {
+                text: 'ESSE3/CINECA',
+                link: `${API_DOCS.BASE_URL}/cineca/${COMMON_LINKS.OVERVIEW}`,
+              },
+              {
+                text: 'MIUR',
+                link: `${API_DOCS.BASE_URL}/miur/${COMMON_LINKS.OVERVIEW}`,
+              },
+              {
+                text: 'European Data Portal',
+                link: `${API_DOCS.BASE_URL}/european-data-portal/${COMMON_LINKS.OVERVIEW}`,
+              },
+            ],
           },
         ],
       },
-      { text: 'Guides', link: '/guides/data-sources-overview' },
+
+      // ================================
+      // GitHub
+      // ================================
       {
         text: 'GitHub',
-        link: 'https://github.com/ohmyopensource/ohmyuniversity-docs',
+        link: `${ORGANIZATION.BASE_URL}/${REPOSITORY.URL}`,
         target: '_blank',
       },
     ],
@@ -93,32 +183,51 @@ export default defineConfig({
     // ================================
     sidebar: {
       // ================================
-      // PROJECT INDEX
+      // PROJECT DOCS
       // ================================
       '/project/': [
         {
-          text: 'RAD - Requirements & Analysis',
-          link: '/project/rad/overview',
+          text: PROJECT_DOCS.MAIN_TITLE,
+          items: [
+            {
+              text: COMMON_TITLES.OVERVIEW,
+              link: `${PROJECT_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
+            },
+          ],
         },
         {
-          text: 'SDD - System Design',
-          link: '/project/sdd/overview',
+          text: 'Formal Documents',
+          items: [
+            {
+              text: PROJECT_DOCS.RAD,
+              link: `${PROJECT_DOCS.BASE_URL}/rad/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: PROJECT_DOCS.SDD,
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: PROJECT_DOCS.ODD,
+              link: `${PROJECT_DOCS.BASE_URL}/odd/${COMMON_LINKS.OVERVIEW}`,
+            },
+          ],
         },
         {
-          text: 'ODD - Operational Design',
-          link: '/project/odd/overview',
-        },
-        {
-          text: 'UML Diagrams',
-          link: '/project/uml/index',
-        },
-        {
-          text: 'Test Plan',
-          link: '/project/testing/test-plan',
-        },
-        {
-          text: 'User Manual',
-          link: '/project/user-manual/getting-started',
+          text: 'Supporting Material',
+          items: [
+            {
+              text: 'UML Diagrams',
+              link: `${PROJECT_DOCS.BASE_URL}/uml/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: 'Test Plan',
+              link: `${PROJECT_DOCS.BASE_URL}/testing/test-plan`,
+            },
+            {
+              text: 'User Manual',
+              link: `${PROJECT_DOCS.BASE_URL}/user-manual/${COMMON_LINKS.OVERVIEW}`,
+            },
+          ],
         },
       ],
       // ================================
@@ -127,14 +236,14 @@ export default defineConfig({
       '/project/rad/': [
         {
           text: '< Project Docs',
-          link: '/project/',
+          link: `${PROJECT_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
         },
         {
-          text: 'RAD - Requirements & Analysis',
+          text: PROJECT_DOCS.RAD,
           items: [
             {
               text: 'Overview',
-              link: '/project/rad/overview',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/${COMMON_LINKS.OVERVIEW}`,
             },
           ],
         },
@@ -144,31 +253,31 @@ export default defineConfig({
           items: [
             {
               text: '1. Introduction',
-              link: '/project/rad/1-introduction/1-introduction',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/1-introduction/1-introduction`,
             },
             {
               text: '1.1 Purpose of the System',
-              link: '/project/rad/1-introduction/1-1-purpose-of-the-system',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/1-introduction/1-1-purpose-of-the-system`,
             },
             {
               text: '1.2 Scope of the System',
-              link: '/project/rad/1-introduction/1-2-scope-of-the-system',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/1-introduction/1-2-scope-of-the-system`,
             },
             {
               text: '1.3 Objectives & Success Criteria',
-              link: '/project/rad/1-introduction/1-3-objectives-and-success-criteria-of-the-project',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/1-introduction/1-3-objectives-and-success-criteria-of-the-project`,
             },
             {
               text: '1.4 Definitions, Acronyms & Abbreviations',
-              link: '/project/rad/1-introduction/1-4-definitions-acronyms-and-abbreviations',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/1-introduction/1-4-definitions-acronyms-and-abbreviations`,
             },
             {
               text: '1.5 References',
-              link: '/project/rad/1-introduction/1-5-references',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/1-introduction/1-5-references`,
             },
             {
               text: '1.6 Overview',
-              link: '/project/rad/1-introduction/1-6-overview',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/1-introduction/1-6-overview`,
             },
           ],
         },
@@ -178,7 +287,7 @@ export default defineConfig({
           items: [
             {
               text: '2. Current System',
-              link: '/project/rad/2-current-system/2-current-system',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/2-current-system/2-current-system`,
             },
           ],
         },
@@ -188,75 +297,75 @@ export default defineConfig({
           items: [
             {
               text: '3. Proposed System',
-              link: '/project/rad/3-proposed-system/3-proposed-system/3-proposed-system',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-proposed-system/3-proposed-system`,
             },
             {
               text: '3.1 Overview',
-              link: '/project/rad/3-proposed-system/3-1-overview',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-1-overview`,
             },
             {
               text: '3.2 Functional Requirements',
-              link: '/project/rad/3-proposed-system/3-2-functional-requirements',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-2-functional-requirements`,
             },
             {
               text: '3.3 Non-Functional Requirements',
-              link: '/project/rad/3-proposed-system/3-3-nonfunctional-requirements',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-nonfunctional-requirements`,
             },
             {
               text: '3.3.1 Usability',
-              link: '/project/rad/3-proposed-system/3-3-1-usability',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-1-usability`,
             },
             {
               text: '3.3.2 Reliability',
-              link: '/project/rad/3-proposed-system/3-3-2-reliability',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-2-reliability`,
             },
             {
               text: '3.3.3 Performance',
-              link: '/project/rad/3-proposed-system/3-3-3-performance',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-3-performance`,
             },
             {
               text: '3.3.4 Supportability',
-              link: '/project/rad/3-proposed-system/3-3-4-supportability',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-4-supportability`,
             },
             {
               text: '3.3.5 Implementation',
-              link: '/project/rad/3-proposed-system/3-3-5-implementation',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-5-implementation`,
             },
             {
               text: '3.3.6 Interface',
-              link: '/project/rad/3-proposed-system/3-3-6-interface',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-6-interface`,
             },
             {
               text: '3.3.7 Packaging',
-              link: '/project/rad/3-proposed-system/3-3-7-packaging',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-7-packaging`,
             },
             {
               text: '3.3.8 Legal',
-              link: '/project/rad/3-proposed-system/3-3-8-legal',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-3-8-legal`,
             },
             {
               text: '3.4 System Models',
-              link: '/project/rad/3-proposed-system/3-4-system-models',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-4-system-models`,
             },
             {
               text: '3.4.1 Scenarios',
-              link: '/project/rad/3-proposed-system/3-4-1-scenarios',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-4-1-scenarios`,
             },
             {
               text: '3.4.2 Use Case Model',
-              link: '/project/rad/3-proposed-system/3-4-2-use-case-model',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-4-2-use-case-model`,
             },
             {
               text: '3.4.3 Object Model',
-              link: '/project/rad/3-proposed-system/3-4-3-object-model',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-4-3-object-model`,
             },
             {
               text: '3.4.4 Dynamic Model',
-              link: '/project/rad/3-proposed-system/3-4-4-dynamic-model',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-4-4-dynamic-model`,
             },
             {
               text: '3.4.5 UI-Navigational Paths & Screen Mockups',
-              link: '/project/rad/3-proposed-system/3-4-5-user-interface-navigational-paths-and-screen-mockups',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-4-5-user-interface-navigational-paths-and-screen-mockups`,
             },
           ],
         },
@@ -264,7 +373,10 @@ export default defineConfig({
           text: '4. Glossary',
           collapsed: true,
           items: [
-            { text: '4. Glossary', link: '/project/rad/4-glossary/4-glossary' },
+            {
+              text: '4. Glossary',
+              link: `${PROJECT_DOCS.BASE_URL}/rad/4-glossary/4-glossary`,
+            },
           ],
         },
       ],
@@ -275,68 +387,112 @@ export default defineConfig({
       '/project/sdd/': [
         {
           text: '< Project Docs',
-          link: '/project/',
+          link: `${PROJECT_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
         },
         {
-          text: 'SDD',
-          items: [{ text: 'Overview', link: '/project/sdd/overview' }],
-        },
-        {
-          text: 'Architecture & Stack',
-          collapsed: false,
+          text: PROJECT_DOCS.SDD,
           items: [
             {
-              text: 'System Architecture',
-              link: '/project/sdd/system-architecture',
-            },
-            { text: 'Technology Stack', link: '/project/sdd/technology-stack' },
-            {
-              text: 'Deployment Architecture',
-              link: '/project/sdd/deployment-architecture',
+              text: 'Overview',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/${COMMON_LINKS.OVERVIEW}`,
             },
           ],
         },
         {
-          text: 'Design Specifications',
-          collapsed: false,
-          items: [
-            { text: 'Data Model', link: '/project/sdd/data-model' },
-            { text: 'API Design', link: '/project/sdd/api-design' },
-            { text: 'Security Design', link: '/project/sdd/security-design' },
-          ],
-        },
-        {
-          text: 'Architecture Decision Records',
-          collapsed: false,
-          items: [
-            { text: 'ADR Index', link: '/project/sdd/adr/index' },
-            {
-              text: 'ADR-001 - Database',
-              link: '/project/sdd/adr/adr-001-database',
-            },
-            {
-              text: 'ADR-002 - API Framework',
-              link: '/project/sdd/adr/adr-002-api-framework',
-            },
-            { text: 'Template', link: '/project/sdd/adr/adr-NNN-template' },
-          ],
-        },
-        {
-          text: 'UML Diagrams',
+          text: '1. Introduction',
           collapsed: true,
           items: [
-            { text: '↗ Class Diagram', link: '/project/uml/class-diagram' },
             {
-              text: '↗ Component Diagram',
-              link: '/project/uml/component-diagram',
+              text: '1. Introduction',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/1-introduction/1-introduction`,
             },
             {
-              text: '↗ Deployment Diagram',
-              link: '/project/uml/deployment-diagram',
+              text: '1.1 Purpose of the System',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/1-introduction/1-1-purpose-of-the-system`,
             },
             {
-              text: '↗ Sequence Diagrams',
-              link: '/project/uml/sequence-diagrams',
+              text: '1.2 Design Goals',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/1-introduction/1-2-design-goals`,
+            },
+            {
+              text: '1.3 Definitions, Acronyms & Abbreviations',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/1-introduction/1-3-definitions-acronyms-and-abbreviations`,
+            },
+            {
+              text: '1.4 References',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/1-introduction/1-4-references`,
+            },
+            {
+              text: '1.5 Overview',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/1-introduction/1-5-overview`,
+            },
+          ],
+        },
+        {
+          text: '2. Current Software Architecture',
+          collapsed: true,
+          items: [
+            {
+              text: '2. Current Software Architecture',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/2-current-software-architecture/2-current-software-architecture`,
+            },
+          ],
+        },
+        {
+          text: '3. Proposed Software Architecture',
+          collapsed: true,
+          items: [
+            {
+              text: '3. Proposed Software Architecture',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/3-proposed-software-architecture/3-proposed-software-architecture`,
+            },
+            {
+              text: '3.1 Overview',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/3-proposed-software-architecture/3-1-overview`,
+            },
+            {
+              text: '3.2 Subsystem Decomposition',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/3-proposed-software-architecture/3-2-subsystem-decomposition`,
+            },
+            {
+              text: '3.3 Hardware/Software Mapping',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/3-proposed-software-architecture/3-3-hardware-software-mapping`,
+            },
+            {
+              text: '3.4 Persistent Data Management',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/3-proposed-software-architecture/3-4-persistent-data-management`,
+            },
+            {
+              text: '3.5 Access Control & Security',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/3-proposed-software-architecture/3-5-access-control-and-security`,
+            },
+            {
+              text: '3.6 Global Software Control',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/3-proposed-software-architecture/3-6-global-software-control`,
+            },
+            {
+              text: '3.7 Boundary Conditions',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/3-proposed-software-architecture/3-7-boundary-conditions`,
+            },
+          ],
+        },
+        {
+          text: '4. Subsystems & Services',
+          collapsed: true,
+          items: [
+            {
+              text: '4. Subsystems & Services',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/4-subsystems-services/4-subsystems-services`,
+            },
+          ],
+        },
+        {
+          text: '5. Glossary',
+          collapsed: true,
+          items: [
+            {
+              text: '5. Glossary',
+              link: `${PROJECT_DOCS.BASE_URL}/sdd/5-glossary/5-glossary`,
             },
           ],
         },
@@ -348,33 +504,70 @@ export default defineConfig({
       '/project/odd/': [
         {
           text: '< Project Docs',
-          link: '/project/',
+          link: `${PROJECT_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
         },
         {
-          text: 'ODD',
-          items: [{ text: 'Overview', link: '/project/odd/overview' }],
-        },
-        {
-          text: 'Data Operations',
-          collapsed: false,
+          text: PROJECT_DOCS.ODD,
           items: [
-            { text: 'Data Ingestion', link: '/project/odd/data-ingestion' },
-            { text: 'Data Processing', link: '/project/odd/data-processing' },
-            { text: 'Business Rules', link: '/project/odd/business-rules' },
+            {
+              text: 'Overview',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/${COMMON_LINKS.OVERVIEW}`,
+            },
           ],
         },
         {
-          text: 'Operational Procedures',
-          collapsed: false,
+          text: '1. Introduction',
+          collapsed: true,
           items: [
-            { text: 'Error Handling', link: '/project/odd/error-handling' },
             {
-              text: 'Monitoring & Logging',
-              link: '/project/odd/monitoring-logging',
+              text: '1. Introduction',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/1-introduction/1-introduction`,
             },
             {
-              text: 'Maintenance Procedures',
-              link: '/project/odd/maintenance-procedures',
+              text: '1.1 Object Design Trade-offs',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/1-introduction/1-1-object-design-trade-offs`,
+            },
+            {
+              text: '1.2 Guidelines for Interface Documentation',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/1-introduction/1-2-guidelines-for-interface-documentation`,
+            },
+            {
+              text: '1.3 Definitions, Acronyms & Abbreviations',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/1-introduction/1-3-definitions-acronyms-and-abbreviations`,
+            },
+            {
+              text: '1.4 References',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/1-introduction/1-4-references`,
+            },
+          ],
+        },
+        {
+          text: '2. Packages',
+          collapsed: true,
+          items: [
+            {
+              text: '2. Packages',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/2-packages/2-packages`,
+            },
+          ],
+        },
+        {
+          text: '3. Class Interfaces',
+          collapsed: true,
+          items: [
+            {
+              text: '3. Class Interfaces',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/3-class-interfaces/3-class-interfaces`,
+            },
+          ],
+        },
+        {
+          text: '4. Glossary',
+          collapsed: true,
+          items: [
+            {
+              text: '4. Glossary',
+              link: `${PROJECT_DOCS.BASE_URL}/odd/4-glossary/4-glossary`,
             },
           ],
         },
@@ -386,24 +579,32 @@ export default defineConfig({
       '/project/uml/': [
         {
           text: '< Project Docs',
-          link: '/project/',
+          link: `${PROJECT_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
         },
         {
           text: 'UML Diagrams',
-          items: [{ text: 'Index', link: '/project/uml/index' }],
+          items: [
+            {
+              text: 'Overview',
+              link: `${PROJECT_DOCS.BASE_URL}/uml/${COMMON_LINKS.OVERVIEW}`,
+            },
+          ],
         },
         {
           text: 'Structural Diagrams',
           collapsed: false,
           items: [
-            { text: 'Class Diagram', link: '/project/uml/class-diagram' },
+            {
+              text: 'Class Diagram',
+              link: `${PROJECT_DOCS.BASE_URL}/uml/class-diagram`,
+            },
             {
               text: 'Component Diagram',
-              link: '/project/uml/component-diagram',
+              link: `${PROJECT_DOCS.BASE_URL}/uml/component-diagram`,
             },
             {
               text: 'Deployment Diagram',
-              link: '/project/uml/deployment-diagram',
+              link: `${PROJECT_DOCS.BASE_URL}/uml/deployment-diagram`,
             },
           ],
         },
@@ -411,14 +612,17 @@ export default defineConfig({
           text: 'Behavioral Diagrams',
           collapsed: false,
           items: [
-            { text: 'Use Case Diagram', link: '/project/uml/use-case-diagram' },
+            {
+              text: 'Use Case Diagram',
+              link: `${PROJECT_DOCS.BASE_URL}/uml/use-case-diagram`,
+            },
             {
               text: 'Sequence Diagrams',
-              link: '/project/uml/sequence-diagrams',
+              link: `${PROJECT_DOCS.BASE_URL}/uml/sequence-diagrams`,
             },
             {
               text: 'Activity Diagrams',
-              link: '/project/uml/activity-diagrams',
+              link: `${PROJECT_DOCS.BASE_URL}/uml/activity-diagrams`,
             },
           ],
         },
@@ -430,28 +634,44 @@ export default defineConfig({
       '/project/testing/': [
         {
           text: '< Project Docs',
-          link: '/project/',
+          link: `${PROJECT_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
         },
         {
           text: 'Testing',
           items: [
-            { text: 'Test Plan', link: '/project/testing/test-plan' },
-            { text: 'Test Strategy', link: '/project/testing/test-strategy' },
+            {
+              text: 'Overview',
+              link: `${PROJECT_DOCS.BASE_URL}/testing/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: 'Test Plan',
+              link: `${PROJECT_DOCS.BASE_URL}/testing/test-plan`,
+            },
+            {
+              text: 'Test Strategy',
+              link: `${PROJECT_DOCS.BASE_URL}/testing/test-strategy`,
+            },
           ],
         },
         {
           text: 'Test Specifications',
           collapsed: false,
           items: [
-            { text: 'Unit Tests', link: '/project/testing/unit-tests' },
+            {
+              text: 'Unit Tests',
+              link: `${PROJECT_DOCS.BASE_URL}/testing/unit-tests`,
+            },
             {
               text: 'Integration Tests',
-              link: '/project/testing/integration-tests',
+              link: `${PROJECT_DOCS.BASE_URL}/testing/integration-tests`,
             },
-            { text: 'End-to-End Tests', link: '/project/testing/e2e-tests' },
+            {
+              text: 'End-to-End Tests',
+              link: `${PROJECT_DOCS.BASE_URL}/testing/e2e-tests`,
+            },
             {
               text: 'Performance Tests',
-              link: '/project/testing/performance-tests',
+              link: `${PROJECT_DOCS.BASE_URL}/testing/performance-tests`,
             },
           ],
         },
@@ -463,14 +683,14 @@ export default defineConfig({
       '/project/user-manual/': [
         {
           text: '< Project Docs',
-          link: '/project/',
+          link: `${PROJECT_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
         },
         {
           text: 'User Manual',
           items: [
             {
-              text: 'Getting Started',
-              link: '/project/user-manual/getting-started',
+              text: 'Overview',
+              link: `${PROJECT_DOCS.BASE_URL}/user-manual/${COMMON_LINKS.OVERVIEW}`,
             },
           ],
         },
@@ -478,10 +698,13 @@ export default defineConfig({
           text: 'Platform Guides',
           collapsed: false,
           items: [
-            { text: 'Web Application', link: '/project/user-manual/web-app' },
+            {
+              text: 'Web Application',
+              link: `${PROJECT_DOCS.BASE_URL}/user-manual/web-app`,
+            },
             {
               text: 'Mobile Application',
-              link: '/project/user-manual/mobile-app',
+              link: `${PROJECT_DOCS.BASE_URL}/user-manual/mobile-app`,
             },
           ],
         },
@@ -489,10 +712,10 @@ export default defineConfig({
           text: 'Support',
           collapsed: false,
           items: [
-            { text: 'FAQ', link: '/project/user-manual/faq' },
+            { text: 'FAQ', link: `${PROJECT_DOCS.BASE_URL}/user-manual/faq` },
             {
               text: 'Troubleshooting',
-              link: '/project/user-manual/troubleshooting',
+              link: `${PROJECT_DOCS.BASE_URL}/user-manual/troubleshooting`,
             },
           ],
         },
@@ -503,12 +726,21 @@ export default defineConfig({
       // ================================
       '/getting-started/': [
         {
-          text: '🚀 Getting Started',
+          text: COMMON_TITLES.GETTING_STARTED,
           items: [
-            { text: 'Overview', link: '/getting-started/overview' },
-            { text: 'Setup', link: '/getting-started/setup' },
-            { text: 'API Quickstart', link: '/getting-started/api' },
-            { text: 'Contributing', link: '/getting-started/contribute' },
+            {
+              text: 'Overview',
+              link: `/${COMMON_LINKS.GETTING_STARTED}/${COMMON_LINKS.OVERVIEW}`,
+            },
+            { text: 'Setup', link: `/${COMMON_LINKS.GETTING_STARTED}/setup` },
+            {
+              text: 'API Quickstart',
+              link: `/${COMMON_LINKS.GETTING_STARTED}/api`,
+            },
+            {
+              text: 'Contributing',
+              link: `/${COMMON_LINKS.GETTING_STARTED}/contribute`,
+            },
           ],
         },
       ],
@@ -518,9 +750,12 @@ export default defineConfig({
       // ================================
       '/architecture/': [
         {
-          text: '🏛️ Architecture',
+          text: COMMON_TITLES.ARCHITECTURE,
           items: [
-            { text: 'Overview', link: '/architecture/overview' },
+            {
+              text: 'Overview',
+              link: `/architecture/${COMMON_LINKS.OVERVIEW}`,
+            },
             { text: 'System Context', link: '/architecture/system-context' },
           ],
         },
@@ -528,9 +763,15 @@ export default defineConfig({
           text: 'API Backend',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/architecture/api/overview' },
+            {
+              text: 'Overview',
+              link: `/architecture/api/${COMMON_LINKS.OVERVIEW}`,
+            },
             { text: 'API Design', link: '/architecture/api/api-design' },
-            { text: 'Architecture', link: '/architecture/api/architecture' },
+            {
+              text: COMMON_TITLES.ARCHITECTURE,
+              link: '/architecture/api/architecture',
+            },
             { text: 'Authentication', link: '/architecture/api/auth' },
             { text: 'Database', link: '/architecture/api/database' },
           ],
@@ -539,8 +780,14 @@ export default defineConfig({
           text: 'Web App',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/architecture/web/overview' },
-            { text: 'Architecture', link: '/architecture/web/architecture' },
+            {
+              text: 'Overview',
+              link: `/architecture/web/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: COMMON_TITLES.ARCHITECTURE,
+              link: '/architecture/web/architecture',
+            },
             {
               text: 'State Management',
               link: '/architecture/web/state-management',
@@ -555,8 +802,14 @@ export default defineConfig({
           text: 'Mobile App',
           collapsed: true,
           items: [
-            { text: 'Overview', link: '/architecture/mobile/overview' },
-            { text: 'Architecture', link: '/architecture/mobile/architecture' },
+            {
+              text: 'Overview',
+              link: `/architecture/mobile/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: COMMON_TITLES.ARCHITECTURE,
+              link: '/architecture/mobile/architecture',
+            },
             {
               text: 'State & Navigation',
               link: '/architecture/mobile/state-navigation',
@@ -571,9 +824,12 @@ export default defineConfig({
           text: 'Desktop App',
           collapsed: true,
           items: [
-            { text: 'Overview', link: '/architecture/desktop/overview' },
             {
-              text: 'Architecture',
+              text: 'Overview',
+              link: `/architecture/desktop/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: COMMON_TITLES.ARCHITECTURE,
               link: '/architecture/desktop/architecture',
             },
             { text: 'Packaging', link: '/architecture/desktop/packaging' },
@@ -594,45 +850,75 @@ export default defineConfig({
       ],
 
       // ================================
-      // API REFERENCE
+      // API DOCS
       // ================================
       '/api/': [
         {
-          text: '📡 API Reference',
+          text: API_DOCS.MAIN_TITLE,
           items: [
-            { text: 'API Index', link: '/api/api-index' },
-            { text: 'Conventions', link: '/api/conventions' },
+            {
+              text: 'Overview',
+              link: `${API_DOCS.BASE_URL}/${COMMON_LINKS.OVERVIEW}`,
+            },
+            { text: 'Conventions', link: `${API_DOCS.BASE_URL}/conventions` },
           ],
         },
         {
           text: 'CINECA',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/api/cineca/overview' },
-            { text: 'Authentication', link: '/api/cineca/auth' },
-            { text: 'Endpoints', link: '/api/cineca/endpoints' },
-            { text: 'Changelog', link: '/api/cineca/changelog' },
+            {
+              text: 'Overview',
+              link: `${API_DOCS.BASE_URL}/cineca/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: 'Authentication',
+              link: `${API_DOCS.BASE_URL}/cineca/auth`,
+            },
+            {
+              text: 'Endpoints',
+              link: `${API_DOCS.BASE_URL}/cineca/endpoints`,
+            },
+            {
+              text: 'Changelog',
+              link: `${API_DOCS.BASE_URL}/cineca/changelog`,
+            },
           ],
         },
         {
           text: 'MIUR',
           collapsed: false,
           items: [
-            { text: 'Overview', link: '/api/miur/overview' },
-            { text: 'Authentication', link: '/api/miur/auth' },
-            { text: 'Endpoints', link: '/api/miur/endpoints' },
-            { text: 'Datasets', link: '/api/miur/datasets' },
-            { text: 'Changelog', link: '/api/miur/changelog' },
+            {
+              text: 'Overview',
+              link: `${API_DOCS.BASE_URL}/miur/${COMMON_LINKS.OVERVIEW}`,
+            },
+            { text: 'Authentication', link: `${API_DOCS.BASE_URL}/miur/auth` },
+            { text: 'Endpoints', link: `${API_DOCS.BASE_URL}/miur/endpoints` },
+            { text: 'Datasets', link: `${API_DOCS.BASE_URL}/miur/datasets` },
+            { text: 'Changelog', link: `${API_DOCS.BASE_URL}/miur/changelog` },
           ],
         },
         {
           text: 'European Data Portal',
           collapsed: true,
           items: [
-            { text: 'Overview', link: '/api/european-data-portal/overview' },
-            { text: 'Authentication', link: '/api/european-data-portal/auth' },
-            { text: 'Endpoints', link: '/api/european-data-portal/endpoints' },
-            { text: 'Changelog', link: '/api/european-data-portal/changelog' },
+            {
+              text: 'Overview',
+              link: `${API_DOCS.BASE_URL}/european-data-portal/${COMMON_LINKS.OVERVIEW}`,
+            },
+            {
+              text: 'Authentication',
+              link: `${API_DOCS.BASE_URL}/european-data-portal/auth`,
+            },
+            {
+              text: 'Endpoints',
+              link: `${API_DOCS.BASE_URL}/european-data-portal/endpoints`,
+            },
+            {
+              text: 'Changelog',
+              link: `${API_DOCS.BASE_URL}/european-data-portal/changelog`,
+            },
           ],
         },
       ],
@@ -642,24 +928,33 @@ export default defineConfig({
       // ================================
       '/guides/': [
         {
-          text: '📚 Guides',
+          text: COMMON_TITLES.GUIDES,
           items: [
             {
               text: 'Data Sources Overview',
-              link: '/guides/data-sources-overview',
+              link: `/${COMMON_LINKS.GUIDES}/data-sources-overview`,
             },
-            { text: 'API Usage Patterns', link: '/guides/api-usage-patterns' },
+            {
+              text: 'API Usage Patterns',
+              link: `/${COMMON_LINKS.GUIDES}/api-usage-patterns`,
+            },
           ],
         },
         {
           text: 'Data Sources',
           collapsed: false,
           items: [
-            { text: 'CINECA Data Guide', link: '/guides/cineca-data-guide' },
-            { text: 'MIUR Data Guide', link: '/guides/miur-data-guide' },
+            {
+              text: 'CINECA Data Guide',
+              link: `/${COMMON_LINKS.GUIDES}/cineca-data-guide`,
+            },
+            {
+              text: 'MIUR Data Guide',
+              link: `/${COMMON_LINKS.GUIDES}/miur-data-guide`,
+            },
             {
               text: 'European Data Portal Guide',
-              link: '/guides/european-data-portal-guide',
+              link: `/${COMMON_LINKS.GUIDES}/european-data-portal-guide`,
             },
           ],
         },
@@ -667,22 +962,25 @@ export default defineConfig({
           text: 'Data Engineering',
           collapsed: false,
           items: [
-            { text: 'Common Data Issues', link: '/guides/common-data-issues' },
+            {
+              text: 'Common Data Issues',
+              link: `/${COMMON_LINKS.GUIDES}/common-data-issues`,
+            },
             {
               text: 'Data Cleaning Strategies',
-              link: '/guides/data-cleaning-strategies',
+              link: `/${COMMON_LINKS.GUIDES}/data-cleaning-strategies`,
             },
             {
               text: 'Dataset Normalization',
-              link: '/guides/dataset-normalization',
+              link: `/${COMMON_LINKS.GUIDES}/dataset-normalization`,
             },
             {
               text: 'Mapping University Codes',
-              link: '/guides/mapping-university-codes',
+              link: `/${COMMON_LINKS.GUIDES}/mapping-university-codes`,
             },
             {
               text: 'Year Aggregation Rules',
-              link: '/guides/year-aggregation-rules',
+              link: `/${COMMON_LINKS.GUIDES}/year-aggregation-rules`,
             },
           ],
         },
@@ -695,18 +993,17 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/ohmyopensource/ohmyuniversity-docs',
+        link: `${ORGANIZATION.BASE_URL}/${REPOSITORY.URL}`,
       },
     ],
 
     footer: {
-      message: 'Released under the AGPL-3.0 License.',
-      copyright: 'Copyright © 2026 OhMyOpenSource!',
+      message: `${REPOSITORY.LICENSE} · Icons by ${CREDITS.STREAMLINE}`,
+      copyright: `Copyright © 2026 ${ORGANIZATION.NAME} - Guides, ${PROJECT_DOCS.MAIN_TITLE} & ${API_DOCS.MAIN_TITLE}`,
     },
 
     editLink: {
-      pattern:
-        'https://github.com/ohmyopensource/ohmyuniversity-docs/edit/main/docs/:path',
+      pattern: `${ORGANIZATION.BASE_URL}/${REPOSITORY.URL}/edit/main/docs/:path`,
       text: 'Edit this page on GitHub',
     },
 

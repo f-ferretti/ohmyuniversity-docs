@@ -2,87 +2,121 @@
 layout: home
 
 hero:
-  name: 'OhMyUniversity!'
-  text: 'Open source University Data Platform by OhMyOpenSource!'
-  tagline: Technical documentation, API reference, project specifications and user guide
+  name: 'OhMyUniversity! - Docs'
+  text: 'Offical Documentation Website for OhMyUniversity! App'
+  tagline: Technical Documentation, Project Docs, API Docs and User Guide
   image:
     src: /omos-logo.png
     alt: OhMyOpenSource! Logo
   actions:
     - theme: brand
-      text: Developer Docs
+      text: Getting Started
       link: /getting-started/overview
     - theme: alt
       text: Project Docs
-      link: /project/
+      link: /project/overview
     - theme: alt
-      text: API Reference
-      link: /api/api-index
+      text: API Docs
+      link: /api/overview
 
 features:
   - icon:
-      src: /icons/rad.svg
+      dark: /icons/app-dark.svg
+      light: /icons/app-light.svg
+      width: 48
+      height: 48
+    title: App Architecture
+    details: System context diagrams and technical documentation for API, web, mobile and desktop layers
+    link: /architecture/overview
+    linkText: Explore architecture
+
+  - icon:
+      dark: /icons/papi-dark.svg
+      light: /icons/papi-light.svg
+      width: 48
+      height: 48
+    title: Internal API Docs
+    details: Full private internal App Documentation
+    link: /api/overview
+    linkText: Internal API Docs
+
+  - icon:
+      dark: /icons/api-dark.svg
+      light: /icons/api-light.svg
+      width: 48
+      height: 48
+    title: External API Docs
+    details: Full API documentation for CINECA, MIUR and European Data Portal with auth, endpoints and changelogs.
+    link: /api/overview
+    linkText: External API Docs
+
+  - icon:
+      dark: /icons/guides-dark.svg
+      light: /icons/guides-light.svg
+      width: 48
+      height: 48
+    title: Guides
+    details: Practical guides on data sources, normalization, data cleaning strategies and advanced usage patterns.
+    link: /guides/data-sources-overview
+    linkText: Read guides
+
+  - icon:
+      dark: /icons/rad-dark.svg
+      light: /icons/rad-light.svg
+      width: 48
+      height: 48
     title: RAD
     details: Requirements & Analysis Document. Stakeholders, actors, user personas, use cases, user stories, user flows, and functional requirements.
     link: /project/rad/overview
     linkText: Open RAD
 
   - icon:
-      src: /icons/sdd.svg
+      dark: /icons/sdd-dark.svg
+      light: /icons/sdd-light.svg
+      width: 48
+      height: 48
     title: SDD
     details: System Design Document. System architecture, technology stack, data model, API design, security and deployment architecture.
     link: /project/sdd/overview
     linkText: Open SDD
 
   - icon:
-      src: /icons/odd.svg
+      dark: /icons/odd-dark.svg
+      light: /icons/odd-light.svg
+      width: 48
+      height: 48
     title: ODD
     details: Operational Design Document. Data ingestion, processing pipelines, business rules, error handling and maintenance procedures.
     link: /project/odd/overview
     linkText: Open ODD
 
   - icon:
-      src: /icons/uml.svg
+      dark: /icons/uml-dark.svg
+      light: /icons/uml-light.svg
+      width: 48
+      height: 48
     title: UML Diagrams
     details: Centralized UML diagram library. Use case, class, sequence, activity, component and deployment diagrams.
     link: /project/uml/index
     linkText: Browse Diagrams
 
   - icon:
-      src: /icons/testing.svg
+      dark: /icons/test-dark.svg
+      light: /icons/test-light.svg
+      width: 48
+      height: 48
     title: Test Plan
     details: Test strategy, unit, integration, end-to-end and performance test specifications. Execution reports.
     link: /project/testing/test-plan
     linkText: Open Test Plan
 
   - icon:
-      src: /icons/manual.svg
+      dark: /icons/user-dark.svg
+      light: /icons/user-light.svg
+      width: 48
+      height: 48
     title: User Manual
     details: End-user documentation. Onboarding guide, web and mobile app walkthroughs, FAQ and troubleshooting.
     link: /project/user-manual/getting-started
     linkText: Open Manual
-
-  - icon: 🚀
-    title: Getting Started
-    details: Development environment setup, dependencies configuration and first API call.
-    link: /getting-started/overview
-    linkText: Start here
-
-  - icon: 🏛️
-    title: Architecture
-    details: System context diagrams and technical documentation for API, web, mobile and desktop layers
-    link: /architecture/overview
-    linkText: Explore architecture
-
-  - icon: 📡
-    title: API Reference
-    details: Full API documentation for CINECA, MIUR and European Data Portal with auth, endpoints and changelogs.
-    link: /api/api-index
-    linkText: API Reference
-
-  - icon: 📚
-    title: Guides
-    details: Practical guides on data sources, normalization, data cleaning strategies and advanced usage patterns.
-    link: /guides/data-sources-overview
-    linkText: Read guides
 ---
