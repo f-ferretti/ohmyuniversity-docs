@@ -87,4 +87,4 @@ Any change to a source’s documentation must include an entry in `changelog.md`
 
 ## Index updates
 
-After adding or modifying a source, the table in [`api-index.md`](./api-index.md) must be updated with the correct date and status.
+After adding or modifying a source, the table in [`overview.md`](./overview.md) must be updated with the correct date and status.

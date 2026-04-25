@@ -1,6 +1,10 @@
 # OhMyUniversity! - Documentation
 
+[![Documentation](https://img.shields.io/badge/docs-online-blue?style=flat-square)](https://docs.university.ohmyopensource.org)
+
 Welcome to the official documentation repository of **OhMyUniversity!**, an open source project from **OhMyOpenSource!**, that aggregates, normalizes, and makes accessible data and services from the Italian and European university ecosystem.
+
+> 📖 **Documentation site:** [docs.university.ohmyopensource.org](https://docs.university.ohmyopensource.org)
 
 This repository does not contain code: it serves as the central reference point for anyone who wants to contribute, integrate, or understand how the OhMyUniversity! ecosystem works.
 
@@ -20,11 +24,29 @@ All repositories under the `OhMyOpenSource!` organization follow the same struct
 
 ```
 ohmyuniversity-docs/
-├── README.md              ← current file
-├── getting-started/       ← introductory guides, setup, quickstart
-├── guides/                ← in-depth thematic guides
-├── architecture/          ← architectural decisions, diagrams, ADRs
-└── contributing/          ← contribution guidelines, code of conduct, style
+├── README.md                  ← current file
+├── CONTRIBUTING.md            ← contribution guidelines
+├── LICENSE
+├── package.json
+└── docs/
+    ├── index.md               ← home page
+    ├── getting-started/       ← introductory guides, setup, quickstart
+    ├── guides/                ← in-depth thematic guides
+    ├── architecture/          ← architectural decisions, diagrams, ADRs
+    ├── api/                   ← documentation of integrated external APIs
+    │   ├── conventions.md
+    │   ├── overview.md
+    │   ├── cineca/
+    │   ├── miur/
+    │   └── european-data-portal/
+    └── project/               ← project specifications and documentation
+        ├── overview.md
+        ├── rad/               ← Requirements & Analysis Document
+        ├── sdd/               ← System Design Document
+        ├── odd/               ← Object Design Document
+        ├── uml/               ← UML diagrams
+        ├── testing/           ← test plan and reports
+        └── user-manual/       ← end-user documentation
 ```
 
 In particular, the `OhMyUniversity!` repo contains the api folder as well that contain all the information about data retriving from CINECA, MIUR, European Data Portal.
@@ -61,7 +83,7 @@ The sources documented in this repository are:
 
 ## Navigating the API documentation
 
-Start from [`api/api-index.md`](./api/api-index.md) for an overview of all available sources, or navigate directly to the folder of interest.
+Start from [`api/overview.md`](./api/overview.md) for an overview of all available sources, or navigate directly to the folder of interest.
 
 Each source is documented using the same set of files:
 
