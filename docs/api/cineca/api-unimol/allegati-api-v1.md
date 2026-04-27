@@ -49,11 +49,9 @@ The upload process is split into two steps:
 1. **Upload metadata** - POST the attachment metadata via a service-specific endpoint or via the generic `POST /allegati/{tipoAllegato}`. The response includes a `Location` header with the URL for the blob upload.
 2. **Upload blob** - PUT the binary file to `/upload/{uploadId}/blob` using the URL from the previous step.
 
-```
-WARNING!
-
+::: warning
 Inserting metadata alone does NOT persist any data to the application tables. The upload is only complete after the blob is successfully submitted in step 2.
-```
+:::
 
 ---
 
@@ -277,11 +275,9 @@ POST /allegati/{tipoAllegato}
 
 **Cache:** none
 
-```
-WARNING!
-
+::: warning
 This endpoint only saves metadata. The upload is NOT COMPLETE until the blob is submitted via `PUT /upload/{uploadId}/blob` using the URL from the `Location` response header.
-```
+:::
 
 #### Request body
 
@@ -662,11 +658,9 @@ PUT /upload/{uploadId}/blob
 
 **Content-Type:** `multipart/form-data`
 
-```
-WARNING!
-
+::: warning
 This is step 2 of the upload flow. The `uploadId` must be obtained from the `Location` header returned by `POST /allegati/{tipoAllegato}`. The upload is not complete until this endpoint returns `200 OK`.
-```
+:::
 
 #### Response
 
