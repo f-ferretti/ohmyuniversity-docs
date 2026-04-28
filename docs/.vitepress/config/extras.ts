@@ -16,7 +16,7 @@ export const socialLinks: DefaultTheme.SocialLink[] = [
 
 export const footer: DefaultTheme.Footer = {
   message: `${REPOSITORY.LICENSE} · Icons by ${CREDITS.STREAMLINE}`,
-  copyright: `Copyright © 2026 ${ORGANIZATION.NAME} - Guides, ${PROJECT_DOCS.MAIN_TITLE} & ${API_DOCS.MAIN_TITLE}`,
+  copyright: `Copyright © 2026-present ${ORGANIZATION.NAME} - Guides, ${PROJECT_DOCS.MAIN_TITLE} & ${API_DOCS.MAIN_TITLE}`,
 };
 
 export const editLink: DefaultTheme.EditLink = {

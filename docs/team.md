@@ -10,7 +10,7 @@ import {
   VPTeamPageSection
 } from 'vitepress/theme'
 
-const coreMembers = [
+const founder = [
   {
     avatar: 'https://www.github.com/Luxauram.png',
     name: "Luca D'Aurizio (LuxAuram)",
@@ -23,6 +23,9 @@ const coreMembers = [
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/luca-daurizio/' }
     ]
   },
+]
+
+const coreMembers = [
   {
     avatar: 'https://www.github.com/alessiodlm.png',
     name: 'Alessio Del Muto',
@@ -83,6 +86,9 @@ const partners = [
     org: 'University of Molise, Italy',
     orgLink: 'https://www3.unimol.it/'
   },
+]
+
+const support = [
   {
     avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp_gdQoe-SxKGw3IvS-1G_JPsMY70HkqxAPg&s',
     name: 'GitHub Sponsors',
@@ -111,22 +117,31 @@ const partners = [
 </script>
 
 <VPTeamPage>
-<VPTeamPageTitle>
-<template #title>
-Our Brave Nerd Team
-</template>
-<template #lead>
-All the people behind this documentation and the main OhMyUniversity! Project
-</template>
-</VPTeamPageTitle>
+  <VPTeamPageTitle>
+    <template #title>
+    Our Brave Nerd Team
+    </template>
+    <template #lead>
+    All the people behind this documentation and the main OhMyUniversity! Project
+    </template>
+  </VPTeamPageTitle>
 
+  <VPTeamMembers size="medium" :members="founder" />
   <VPTeamMembers size="medium" :members="coreMembers" />
 
   <VPTeamPageSection>
-    <template #title>Partners & Supporters</template>
-    <template #lead>Corporate Sponsors and Community Donations</template>
+    <template #title>Partners</template>
+    <template #lead>Corporate Sponsors</template>
     <template #members>
       <VPTeamMembers size="small" :members="partners" />
+    </template>
+  </VPTeamPageSection>
+
+  <VPTeamPageSection>
+    <template #title>Supporters</template>
+    <template #lead>Community Donations</template>
+    <template #members>
+      <VPTeamMembers size="small" :members="support" />
     </template>
   </VPTeamPageSection>
 </VPTeamPage>
