@@ -30,7 +30,7 @@ const coreMembers = [
     avatar: 'https://www.github.com/alessiodlm.png',
     name: 'Alessio Del Muto',
     title: 'Developer / Contributor',
-    desc: '',
+    desc: 'Start Fresh Next Semester',
     links: [
       { icon: 'github', link: 'https://github.com/alessiodlm' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/alessio-del-muto-7abb13401/' }

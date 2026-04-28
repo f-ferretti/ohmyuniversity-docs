@@ -70,10 +70,6 @@ export const nav: DefaultTheme.NavItem[] = [
         text: 'Supporting Material',
         items: [
           {
-            text: 'UML Diagrams',
-            link: `${PROJECT_DOCS.BASE_URL}/uml/${COMMON_LINKS.OVERVIEW}`,
-          },
-          {
             text: 'Test Plan',
             link: `${PROJECT_DOCS.BASE_URL}/testing/test-plan`,
           },
