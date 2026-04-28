@@ -10,7 +10,7 @@ head:
       content: Requirements Analysis Document for OhMyUniversity - a unified middleware platform designed to simplify and centralize the university digital experience for students.
   - - meta
     - property: og:url
-      content: https://docs.university.ohmyopensource.org/rad/introduction
+      content: https://docs.university.ohmyopensource.org/project/rad/1-introduction/1-introduction
   - - meta
     - name: keywords
       content: ohmyuniversity, rad, requirements analysis, university app, cineca, esse3, moodle, spid, gdpr, agid, middleware, student portal, academic management
@@ -21,22 +21,10 @@ head:
     - name: twitter:description
       content: Requirements Analysis Document for OhMyUniversity - a unified middleware platform designed to simplify and centralize the university digital experience for students.
 ---
+# OhMyUniversity! - RAD: 1.0 Introduction
 
-# OhMyUniversity! - RAD: 1 Introduction
+The current landscape of academic digital services is characterized by deep technological fragmentation, imposing an excessive cognitive load on students who must navigate multiple, disconnected platforms for both daily tasks and long-term planning. **OhMyUniversity!** is born from the necessity to bridge this gap, proposing an integrated digital ecosystem capable of harmonizing data and workflows from heterogeneous legacy systems into a single, fluid, and coherent user experience.
 
-This document specifies the requirements needed for **OhMyUniversity!**, a system designed to unify and simplify the student experience across various university digital services. It serves as the definitive foundation for the development phase, detailing the system's objectives, scope, success criteria, and underlying architecture.
+This **Requirements Analysis Document (RAD)** serves as the cornerstone of the development process. It goes beyond a simple list of features to define the architectural and operational vision required to transform bureaucratic complexity into active digital support. As an authoritative guide for all stakeholders, this document establishes a common language between developers, designers, and institutional entities, ensuring that the project goals remain aligned throughout the lifecycle.
 
-Conceived to resolve the deep fragmentation within current university digital services, **OhMyUniversity!** provides students - the primary actors of the system - with a single, simplified access point for managing their academic life. It transforms a scattered user experience, currently divided among numerous web portals, static PDF files, and physical offices, into a comprehensive digital ecosystem. The software acts as an active supportive tool that goes beyond mere data visualization, assisting students throughout their entire journey: from daily logistical activities to the strategic planning of their academic career, effectively reducing the burden of bureaucracy and information retrieval.
-
-The scope of the project encompasses the development of a unified interface acting as a **middleware** layer. By leveraging APIs, **OhMyUniversity!** interoperates with a set of external systems to deliver its core functionalities:
-
-- **Cineca/Esse3** and **Moodle** provide career and didactic data;
-- **Digital Identity Providers** such as SPID enable secure user authentication;
-- **Map Providers** support transportation and geolocation features;
-- **Corporate Partners** enable the delivery of student conventions and discounts.
-
-However, the system's scope remains strictly limited to data consultation, synchronization, and organization - direct financial transactions and the official recording of grades are explicitly excluded, as these functions fall under the exclusive jurisdiction of the university's administrative management systems.
-
-The success of the project is anchored to strict technical and functional parameters: zero error tolerance when syncing sensitive academic data with official university servers, high navigation efficiency allowing expert users to reach critical information within a maximum of 3 interactions, and flawless integration with both institutional and partner portals.
-
-The entire system is designed in full compliance with **GDPR** (EU Regulation 2016/679) and the accessibility criteria outlined by **AgID** _(Agenzia per l'Italia Digitale)_, ensuring the secure processing and protection of users' personal data throughout.
+By adopting a strictly *student-centric* approach, the system outlined herein aims to redefine the very concept of an academic portal. No longer a mere static archive of grades and deadlines, **OhMyUniversity!** acts as an intelligent middleware companion that supports students throughout their entire educational journey. From real-time synchronization to predictive career planning, the project’s ultimate goal is to return time and focus to learning, effectively reducing the technical friction that currently hinders academic success.
