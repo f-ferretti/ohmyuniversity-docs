@@ -16,7 +16,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 1 - Paolo Ferretti
 
-![Paolo Ferretti](/personas/paolo.webp)
+![Paolo Ferretti](/docs/public/personas/paolo.webp)
 
 | Attribute            | Details                                                     |
 | -------------------- | ----------------------------------------------------------- |
@@ -55,7 +55,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 2 - Opra Sharma
 
-![Opra Sharma](/personas/opra.webp)
+![Opra Sharma](/docs/public/personas/opra.webp)
 
 | Attribute            | Details                                                       |
 | -------------------- | ------------------------------------------------------------- |
@@ -98,7 +98,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 3 - Moreno Basile
 
-![Moreno Basile](/personas/moreno.webp)
+![Moreno Basile](/docs/public/personas/moreno.webp)
 
 | Attribute            | Details                                          |
 | -------------------- | ------------------------------------------------ |
@@ -137,7 +137,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 4 - Antonello Ruggieri
 
-![Antonello Ruggieri](/personas/antonello.webp)
+![Antonello Ruggieri](/docs/public/personas/antonello.webp)
 
 | Attribute            | Details                                                  |
 | -------------------- | -------------------------------------------------------- |
@@ -180,7 +180,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 5 - Vittoria Mancini
 
-![Vittoria Mancini](/personas/vittoria.webp)
+![Vittoria Mancini](/docs/public/personas/vittoria.webp)
 
 | Attribute            | Details                                                  |
 | -------------------- | -------------------------------------------------------- |
@@ -223,16 +223,16 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ### Persona 6 - TechNova Solutions
 
-![TechNova Solutions](/personas/technova.webp)
+![TechNova Solutions](/docs/public/personas/technova.webp)
 
-| Attribute            | Details                                                     |
-| -------------------- | ----------------------------------------------------------- |
-| **Industry** | IT and Software Development                                 |
-| **Size** | Medium Enterprise (50-200 employees)                        |
-| **Target Audience** | Students and recent graduates in STEM fields                |
-| **Role** | Corporate partner for recruitment and events (Recruiting)   |
-| **Location** | Headquartered in Milan, with Smart Working policies         |
-| **Tech Proficiency** | High - uses digital platforms and ATS daily                 |
+| Attribute            | Details                                                   |
+| -------------------- | --------------------------------------------------------- |
+| **Industry**         | IT and Software Development                               |
+| **Size**             | Medium Enterprise (50-200 employees)                      |
+| **Target Audience**  | Students and recent graduates in STEM fields              |
+| **Role**             | Corporate partner for recruitment and events (Recruiting) |
+| **Location**         | Headquartered in Milan, with Smart Working policies       |
+| **Tech Proficiency** | High - uses digital platforms and ATS daily               |
 
 **Goals**
 
@@ -262,16 +262,16 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ### Persona 7 - Studium Café & Books
 
-![Studium Café](/personas/studiumcafe.webp)
+![Studium Café](/docs/public/personas/studiumcafe.webp)
 
-| Attribute            | Details                                                     |
-| -------------------- | ----------------------------------------------------------- |
-| **Industry** | Catering and Retail (Bookstore/Café)                        |
-| **Size** | Small Business (Local commercial activity)                  |
-| **Target Audience** | All enrolled university students                            |
-| **Role** | Partnered local merchant                                    |
-| **Location** | City center (in the immediate vicinity of the university)       |
-| **Tech Proficiency** | Medium - comfortable with basic POS systems, apps, and web  |
+| Attribute            | Details                                                    |
+| -------------------- | ---------------------------------------------------------- |
+| **Industry**         | Catering and Retail (Bookstore/Café)                       |
+| **Size**             | Small Business (Local commercial activity)                 |
+| **Target Audience**  | All enrolled university students                           |
+| **Role**             | Partnered local merchant                                   |
+| **Location**         | City center (in the immediate vicinity of the university)  |
+| **Tech Proficiency** | Medium - comfortable with basic POS systems, apps, and web |
 
 **Goals**
 
@@ -301,16 +301,16 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ### Persona 8 - Prof. Alessandro Conti
 
-![Alessandro Conti](/personas/alessandro.webp)
+![Alessandro Conti](/docs/public/personas/alessandro.webp)
 
-| Attribute            | Details                                                     |
-| -------------------- | ----------------------------------------------------------- |
-| **Age** | 55                                                          |
-| **Nationality** | Italian                                                     |
-| **Gender** | Male                                                        |
-| **Role** | Full Professor                                              |
-| **Location** | Central Italy                                               |
-| **Tech Proficiency** | Medium - relies on university IT for complex setups         |
+| Attribute            | Details                                             |
+| -------------------- | --------------------------------------------------- |
+| **Age**              | 55                                                  |
+| **Nationality**      | Italian                                             |
+| **Gender**           | Male                                                |
+| **Role**             | Full Professor                                      |
+| **Location**         | Central Italy                                       |
+| **Tech Proficiency** | Medium - relies on university IT for complex setups |
 
 **Goals**
 
@@ -338,16 +338,16 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 9 - Dr. Elena Romano
 
-![Elena Romano](/personas/elena.webp)
+![Elena Romano](/docs/public/personas/elena.webp)
 
-| Attribute            | Details                                                     |
-| -------------------- | ----------------------------------------------------------- |
-| **Age** | 32                                                          |
-| **Nationality** | Italian                                                     |
-| **Gender** | Female                                                      |
-| **Role** | Adjunct Professor and Post-Doc Researcher                   |
-| **Location** | Southern Italy                                              |
-| **Tech Proficiency** | High - regularly uses new productivity tools                |
+| Attribute            | Details                                      |
+| -------------------- | -------------------------------------------- |
+| **Age**              | 32                                           |
+| **Nationality**      | Italian                                      |
+| **Gender**           | Female                                       |
+| **Role**             | Adjunct Professor and Post-Doc Researcher    |
+| **Location**         | Southern Italy                               |
+| **Tech Proficiency** | High - regularly uses new productivity tools |
 
 **Goals**
 
