@@ -16,7 +16,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 1 - Paolo Ferretti
 
-![Paolo Ferretti](/docs/public/personas/paolo.webp)
+![Paolo Ferretti](/personas/paolo.webp)
 
 | Attribute            | Details                                                     |
 | -------------------- | ----------------------------------------------------------- |
@@ -55,7 +55,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 2 - Opra Sharma
 
-![Opra Sharma](/docs/public/personas/opra.webp)
+![Opra Sharma](/personas/opra.webp)
 
 | Attribute            | Details                                                       |
 | -------------------- | ------------------------------------------------------------- |
@@ -98,7 +98,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 3 - Moreno Basile
 
-![Moreno Basile](/docs/public/personas/moreno.webp)
+![Moreno Basile](/personas/moreno.webp)
 
 | Attribute            | Details                                          |
 | -------------------- | ------------------------------------------------ |
@@ -137,7 +137,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 4 - Antonello Ruggieri
 
-![Antonello Ruggieri](/docs/public/personas/antonello.webp)
+![Antonello Ruggieri](/personas/antonello.webp)
 
 | Attribute            | Details                                                  |
 | -------------------- | -------------------------------------------------------- |
@@ -180,7 +180,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 5 - Vittoria Mancini
 
-![Vittoria Mancini](/docs/public/personas/vittoria.webp)
+![Vittoria Mancini](/personas/vittoria.webp)
 
 | Attribute            | Details                                                  |
 | -------------------- | -------------------------------------------------------- |
@@ -223,7 +223,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ### Persona 6 - TechNova Solutions
 
-![TechNova Solutions](/docs/public/personas/technova.webp)
+![TechNova Solutions](/personas/technova.webp)
 
 | Attribute            | Details                                                   |
 | -------------------- | --------------------------------------------------------- |
@@ -262,7 +262,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ### Persona 7 - Studium Café & Books
 
-![Studium Café](/docs/public/personas/studiumcafe.webp)
+![Studium Café](/personas/studiumcafe.webp)
 
 | Attribute            | Details                                                    |
 | -------------------- | ---------------------------------------------------------- |
@@ -301,7 +301,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 ### Persona 8 - Prof. Alessandro Conti
 
-![Alessandro Conti](/docs/public/personas/alessandro.webp)
+![Alessandro Conti](/personas/alessandro.webp)
 
 | Attribute            | Details                                             |
 | -------------------- | --------------------------------------------------- |
@@ -338,7 +338,7 @@ This document defines the primary user personas for the OhMyUniversity! platform
 
 #### Persona 9 - Dr. Elena Romano
 
-![Elena Romano](/docs/public/personas/elena.webp)
+![Elena Romano](/personas/elena.webp)
 
 | Attribute            | Details                                      |
 | -------------------- | -------------------------------------------- |
