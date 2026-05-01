@@ -13,8 +13,10 @@ export const REPOSITORY = {
 export const API_DOCS = {
   MAIN_TITLE: 'API Docs',
   BASE_URL: 'api',
-  CINECA: 'ESSE3/CINECA',
+  CINECA: 'Cineca / ESSE3',
   CINECA_URL: 'cineca',
+  MULTIVERSITY: 'Multiversity',
+  MULTIVERSITY_URL: 'multiversity',
   MIM: "MIM - Ministero dell'Istruzione e del Merito",
   MIM_URL: 'mim',
   MUR: "MUR - Ministero dell'Università e della Ricerca",

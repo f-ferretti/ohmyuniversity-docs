@@ -94,16 +94,6 @@ features:
     linkText: Open ODD
 
   - icon:
-      dark: /icons/uml-dark.svg
-      light: /icons/uml-light.svg
-      width: 48
-      height: 48
-    title: UML Diagrams
-    details: Centralized UML diagram library. Use case, class, sequence, activity, component and deployment diagrams.
-    link: /project/uml/overview
-    linkText: Browse Diagrams
-
-  - icon:
       dark: /icons/test-dark.svg
       light: /icons/test-light.svg
       width: 48

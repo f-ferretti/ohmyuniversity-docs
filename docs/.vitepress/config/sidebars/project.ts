@@ -44,12 +44,8 @@ export const projectSidebar: DefaultTheme.SidebarMulti = {
       text: 'Supporting Material',
       items: [
         {
-          text: 'UML Diagrams',
-          link: `${PROJECT_DOCS.BASE_URL}/uml/${COMMON_LINKS.OVERVIEW}`,
-        },
-        {
-          text: 'Test Plan',
-          link: `${PROJECT_DOCS.BASE_URL}/testing/test-plan`,
+          text: 'Testing',
+          link: `${PROJECT_DOCS.BASE_URL}/testing/${COMMON_LINKS.OVERVIEW}`,
         },
         {
           text: 'User Manual',
@@ -123,7 +119,7 @@ export const projectSidebar: DefaultTheme.SidebarMulti = {
       items: [
         {
           text: '3. Proposed System',
-          link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-proposed-system/3-proposed-system`,
+          link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-proposed-system`,
         },
         {
           text: '3.1 Overview',
@@ -392,58 +388,6 @@ export const projectSidebar: DefaultTheme.SidebarMulti = {
         {
           text: '4. Glossary',
           link: `${PROJECT_DOCS.BASE_URL}/odd/4-glossary/4-glossary`,
-        },
-      ],
-    },
-  ],
-
-  // ================================
-  // UML
-  // ================================
-  '/project/uml/': [
-    backToProjectDocs,
-    {
-      text: 'UML Diagrams',
-      items: [
-        {
-          text: 'Overview',
-          link: `${PROJECT_DOCS.BASE_URL}/uml/${COMMON_LINKS.OVERVIEW}`,
-        },
-      ],
-    },
-    {
-      text: 'Structural Diagrams',
-      collapsed: false,
-      items: [
-        {
-          text: 'Class Diagram',
-          link: `${PROJECT_DOCS.BASE_URL}/uml/class-diagram`,
-        },
-        {
-          text: 'Component Diagram',
-          link: `${PROJECT_DOCS.BASE_URL}/uml/component-diagram`,
-        },
-        {
-          text: 'Deployment Diagram',
-          link: `${PROJECT_DOCS.BASE_URL}/uml/deployment-diagram`,
-        },
-      ],
-    },
-    {
-      text: 'Behavioral Diagrams',
-      collapsed: false,
-      items: [
-        {
-          text: 'Use Case Diagram',
-          link: `${PROJECT_DOCS.BASE_URL}/uml/use-case-diagram`,
-        },
-        {
-          text: 'Sequence Diagrams',
-          link: `${PROJECT_DOCS.BASE_URL}/uml/sequence-diagrams`,
-        },
-        {
-          text: 'Activity Diagrams',
-          link: `${PROJECT_DOCS.BASE_URL}/uml/activity-diagrams`,
         },
       ],
     },

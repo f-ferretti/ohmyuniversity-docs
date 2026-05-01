@@ -1,10 +1,14 @@
 # OhMyUniversity! - Documentation
 
-[![Documentation](https://img.shields.io/badge/docs-online-blue?style=flat-square)](https://docs.university.ohmyopensource.org)
+[![Docs](https://img.shields.io/badge/docs-online-blue?style=flat-square)](https://docs.university.ohmyopensource.org)
+[![Mobile](https://img.shields.io/badge/mobile-app-brightgreen?style=flat-square)](https://github.com/ohmyopensource/ohmyuniversity-mobile)
+[![Web](https://img.shields.io/badge/web-app-blueviolet?style=flat-square)](https://github.com/ohmyopensource/ohmyuniversity-web)
+[![Desktop](https://img.shields.io/badge/desktop-app-lightgrey?style=flat-square)](https://github.com/ohmyopensource/ohmyuniversity-desktop)
+[![API](https://img.shields.io/badge/api-service-orange?style=flat-square)](https://github.com/ohmyopensource/ohmyuniversity-api)
 
 Welcome to the official documentation repository of **OhMyUniversity!**, an open source project from **OhMyOpenSource!**, that aggregates, normalizes, and makes accessible data and services from the Italian and European university ecosystem.
 
-> 📖 **Documentation site:** [docs.university.ohmyopensource.org](https://docs.university.ohmyopensource.org)
+> **Documentation site:** [docs.university.ohmyopensource.org](https://docs.university.ohmyopensource.org)
 
 This repository does not contain code: it serves as the central reference point for anyone who wants to contribute, integrate, or understand how the OhMyUniversity! ecosystem works.
 
@@ -20,7 +24,11 @@ This repository does not contain code: it serves as the central reference point 
 
 ## Repository structure across the organization
 
-All repositories under the `OhMyOpenSource!` organization follow the same structure and naming conventions. Each documentation repository is organized as follows:
+All repositories under the `OhMyOpenSource!` organization follow pretty muche the same structure and naming conventions.
+
+In particular, the api folder contains all the information about data retriving from CINECA, MIM, MUR and European Data Portal.
+
+Each documentation repository is organized as follows:
 
 ```
 ohmyuniversity-docs/
@@ -38,22 +46,15 @@ ohmyuniversity-docs/
     │   ├── overview.md
     │   ├── cineca/
     │   ├── mim/
-    │   └── european-data-portal/
+    │   ├── mur/
+    │   └── edp/
     └── project/               ← project specifications and documentation
         ├── overview.md
         ├── rad/               ← Requirements & Analysis Document
         ├── sdd/               ← System Design Document
         ├── odd/               ← Object Design Document
-        ├── uml/               ← UML diagrams
         ├── testing/           ← test plan and reports
         └── user-manual/       ← end-user documentation
-```
-
-In particular, the `OhMyUniversity!` repo contains the api folder as well that contain all the information about data retriving from CINECA, MIM, European Data Portal.
-
-```
-ohmyuniversity-docs/
-└── api/                   ← documentation of integrated external APIs
 ```
 
 The `getting-started/`, `guides/`, `architecture/`, and `contributing/` sections are shared across all documentation repositories in the organization and follow the same templates. When navigating another repository, the same structure will be found consistently.
@@ -73,11 +74,12 @@ The goal is to allow developers to open `api/` and immediately find:
 
 The sources documented in this repository are:
 
-| Source               | Type                                            | Folder                                                                |
-| -------------------- | ----------------------------------------------- | --------------------------------------------------------------------- |
-| CINECA               | Institutional REST APIs (ANS, ESSE3, etc.)      | [`api/cineca/`](./api/cineca/overview.md)                             |
-| Open Data MIM        | Public open data from the Ministry of Education | [`api/mim/`](./api/mim/overview.md)                                   |
-| European Data Portal | European open data on education and research    | [`api/european-data-portal/`](./api/european-data-portal/overview.md) |
+| Source               | Type                                                          | Folder                                    |
+| -------------------- | ------------------------------------------------------------- | ----------------------------------------- |
+| CINECA               | Institutional REST APIs (ANS, ESSE3, etc.)                    | [`api/cineca/`](./api/cineca/overview.md) |
+| Open Data MIM        | Public open data from the Ministry of Education and Merit     | [`api/mim/`](./api/mim/overview.md)       |
+| Open Data MUR        | Public open data from the Ministry of University and Research | [`api/mur/`](./api/mur/overview.md)       |
+| European Data Portal | European open data on education and research                  | [`api/edpl/`](./api/edpl/overview.md)     |
 
 ---
 
@@ -89,7 +91,6 @@ Each source is documented using the same set of files:
 
 - `overview.md` - description, base URL, limits, response format
 - `auth.md` - authentication method (or why it is not required)
-- `endpoints.md` - complete list of endpoints with examples
 - `datasets.md` - catalog of available datasets _(only for data catalog sources)_
 - `changelog.md` - versions, breaking changes, updates
 
