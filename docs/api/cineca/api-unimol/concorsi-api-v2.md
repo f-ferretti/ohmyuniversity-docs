@@ -30,12 +30,11 @@ head:
 
 ESSE3 REST API to access competition structures. The services allow retrieving competition configurations, retrieving enrollments, rankings, classifications, and performing their insertions.
 Documentation is available at https://wiki.u-gov.it/confluence/display/ESSE3/WS+ESSE3+Area+Concorsi
-
 ## ChangeLog
-
-| Version | ESSE3 Release Version | Interventions                                        |
-| ------- | --------------------- | ---------------------------------------------------- |
-| 1.0.0   | 21.10.00.00           | added API to retrieve competition configuration data |
+  
+Version        | ESSE3 Release Version         | Interventions 
+-              | -                             | -
+    1.0.0      | 21.10.00.00                   | added API to retrieve competition configuration data
 
 ---
 
@@ -139,7 +138,9 @@ GET /concorsi/{aaId}/{testId}
 **`200 OK`**
 
 ```json
-[{}]
+[
+  {}
+]
 ```
 
 **`422 Unprocessable Entity` - Invalid parameters**
@@ -489,7 +490,7 @@ PUT /concorsi/{aaId}/{testId}/graduatorie/file
 
 **Content-Type:** `application/x-www-form-urlencoded`
 
-- `uploadFile` (optional) - allegato da inserire
+- `uploadFile` (optional) — allegato da inserire
 
 #### Response
 
@@ -640,7 +641,7 @@ PUT /concorsi/{aaId}/{testId}/graduatorie/{dettTestId}/file
 
 **Content-Type:** `application/x-www-form-urlencoded`
 
-- `uploadFile` (optional) - allegato da inserire
+- `uploadFile` (optional) — allegato da inserire
 
 #### Response
 
@@ -800,7 +801,7 @@ PUT /concorsi/{aaId}/{testId}/classifica/{proveConcId}/file
 
 **Content-Type:** `application/x-www-form-urlencoded`
 
-- `uploadFile` (optional) - allegato da inserire
+- `uploadFile` (optional) — allegato da inserire
 
 #### Response
 
@@ -1395,6 +1396,6 @@ GET /concorsi/{persId}/{posId}/dettaglioIscritto
 
 ## References
 
-- **Swagger UI:** [Concorsi Api V2 - ESSE3 REST Docs](<https://unimol.esse3.cineca.it/e3rest/docs/?urls.primaryName=Concorsi%20Api%20V2%20(https%3A%2F%2Funimol.esse3.cineca.it%2Fe3rest%2Fapi%2Fconcorsi-service-v2)%3E>)
-- **Spec YAML:** [concorsiApiV2.yaml](<https://unimol.esse3.cineca.it/e3rest/docs/?urls.primaryName=Concorsi%20Api%20V2%20(https%3A%2F%2Funimol.esse3.cineca.it%2Fe3rest%2Fapi%2Fconcorsi-service-v2)>)
+- **Swagger UI:** [Concorsi Api V2 - ESSE3 REST Docs](https://unimol.esse3.cineca.it/e3rest/docs/?urls.primaryName=Concorsi%20Api%20V2%20(https%3A%2F%2Funimol.esse3.cineca.it%2Fe3rest%2Fapi%2Fconcorsi-service-v2)>)
+- **Spec YAML:** [concorsiApiV2.yaml](https://unimol.esse3.cineca.it/e3rest/docs/?urls.primaryName=Concorsi%20Api%20V2%20(https%3A%2F%2Funimol.esse3.cineca.it%2Fe3rest%2Fapi%2Fconcorsi-service-v2))
 - **ESSE3 REST API General Documentation:** [wiki.u-gov.it](https://wiki.u-gov.it/confluence/display/ESSE3/Servizi+REST+su+ESSE3)

@@ -344,7 +344,9 @@ GET /carriere-gdpr/{stuId}
 **`200 OK`**
 
 ```json
-[{}]
+[
+  {}
+]
 ```
 
 <br>
@@ -556,7 +558,9 @@ GET /carriere/datiDottorato
 **`200 OK`**
 
 ```json
-[{}]
+[
+  {}
+]
 ```
 
 **`422 Unprocessable Entity`** - Invalid parameters.
