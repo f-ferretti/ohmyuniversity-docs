@@ -116,6 +116,10 @@ export const nav: DefaultTheme.NavItem[] = [
             link: `${API_DOCS.BASE_URL}/${API_DOCS.CINECA_URL}/${COMMON_LINKS.OVERVIEW}`,
           },
           {
+            text: API_DOCS.MULTIVERSITY,
+            link: `${API_DOCS.BASE_URL}/${API_DOCS.MULTIVERSITY_URL}/${COMMON_LINKS.OVERVIEW}`,
+          },
+          {
             text: API_DOCS.MIM,
             link: `${API_DOCS.BASE_URL}/${API_DOCS.MIM_URL}/${COMMON_LINKS.OVERVIEW}`,
           },

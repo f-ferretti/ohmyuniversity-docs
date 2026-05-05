@@ -44,8 +44,8 @@ export const projectSidebar: DefaultTheme.SidebarMulti = {
       text: 'Supporting Material',
       items: [
         {
-          text: 'Test Plan',
-          link: `${PROJECT_DOCS.BASE_URL}/testing/test-plan`,
+          text: 'Testing',
+          link: `${PROJECT_DOCS.BASE_URL}/testing/${COMMON_LINKS.OVERVIEW}`,
         },
         {
           text: 'User Manual',
@@ -119,7 +119,7 @@ export const projectSidebar: DefaultTheme.SidebarMulti = {
       items: [
         {
           text: '3. Proposed System',
-          link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-proposed-system/3-proposed-system`,
+          link: `${PROJECT_DOCS.BASE_URL}/rad/3-proposed-system/3-proposed-system`,
         },
         {
           text: '3.1 Overview',

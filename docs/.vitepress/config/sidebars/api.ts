@@ -43,6 +43,10 @@ const apiRootSidebar: DefaultTheme.SidebarItem[] = [
         link: `/${API_DOCS.BASE_URL}/${API_DOCS.CINECA_URL}/${COMMON_LINKS.OVERVIEW}`,
       },
       {
+        text: API_DOCS.MULTIVERSITY,
+        link: `/${API_DOCS.BASE_URL}/${API_DOCS.MULTIVERSITY_URL}/${COMMON_LINKS.OVERVIEW}`,
+      },
+      {
         text: API_DOCS.MIM,
         link: `/${API_DOCS.BASE_URL}/${API_DOCS.MIM_URL}/${COMMON_LINKS.OVERVIEW}`,
       },
@@ -64,7 +68,7 @@ const apiRootSidebar: DefaultTheme.SidebarItem[] = [
 const cinecaSidebar: DefaultTheme.SidebarItem[] = [
   backToApiDocs,
   {
-    text: 'ESSE3/CINECA',
+    text: API_DOCS.CINECA,
     items: [
       {
         text: COMMON_TITLES.OVERVIEW,
@@ -94,6 +98,10 @@ const cinecaSidebar: DefaultTheme.SidebarItem[] = [
     text: 'API Unimol',
     collapsed: true,
     items: [
+      {
+        text: 'Overview',
+        link: `/${API_DOCS.BASE_URL}/${API_DOCS.CINECA_URL}/api-unimol/${COMMON_LINKS.OVERVIEW}`,
+      },
       {
         text: 'Aggiorna Carriere',
         link: `/${API_DOCS.BASE_URL}/${API_DOCS.CINECA_URL}/api-unimol/aggcarr-api-v1`,
@@ -215,6 +223,35 @@ const cinecaSidebar: DefaultTheme.SidebarItem[] = [
         link: `/${API_DOCS.BASE_URL}/${API_DOCS.CINECA_URL}/api-unimol/verbali-api-v1`,
       },
     ],
+  },
+];
+
+// ================================
+// MULTIVERSITY
+// ================================
+const multiversitySidebar: DefaultTheme.SidebarItem[] = [
+  backToApiDocs,
+  {
+    text: API_DOCS.MULTIVERSITY,
+    items: [
+      {
+        text: 'Overview',
+        link: `/${API_DOCS.BASE_URL}/${API_DOCS.MULTIVERSITY_URL}/${COMMON_LINKS.OVERVIEW}`,
+      },
+      {
+        text: 'Authentication',
+        link: `/${API_DOCS.BASE_URL}/${API_DOCS.MULTIVERSITY_URL}/auth`,
+      },
+      {
+        text: COMMON_TITLES.CHANGELOG,
+        link: `/${API_DOCS.BASE_URL}/${API_DOCS.MULTIVERSITY_URL}/${COMMON_LINKS.CHANGELOG}`,
+      },
+    ],
+  },
+  {
+    text: API_DOCS.REFERENCE,
+    collapsed: true,
+    items: [],
   },
 ];
 
@@ -387,6 +424,7 @@ export const apiSidebar: DefaultTheme.SidebarMulti = {
   '/api/cineca/api-unimol/': cinecaSidebar,
   '/api/cineca/api-common/': cinecaSidebar,
   '/api/cineca/': cinecaSidebar,
+  '/api/multiversity/': multiversitySidebar,
   '/api/mim/': mimSidebar,
   '/api/mur/': murSidebar,
   '/api/edp/': europeanDataPortalSidebar,

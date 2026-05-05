@@ -1,10 +1,14 @@
 # OhMyUniversity! - Documentation
 
-[![Documentation](https://img.shields.io/badge/docs-online-blue?style=flat-square)](https://docs.university.ohmyopensource.org)
+[![Docs](https://img.shields.io/badge/docs-online-blue?style=flat-square)](https://docs.university.ohmyopensource.org)
+[![Mobile](https://img.shields.io/badge/mobile-app-brightgreen?style=flat-square)](https://github.com/ohmyopensource/ohmyuniversity-mobile)
+[![Web](https://img.shields.io/badge/web-app-blueviolet?style=flat-square)](https://github.com/ohmyopensource/ohmyuniversity-web)
+[![Desktop](https://img.shields.io/badge/desktop-app-lightgrey?style=flat-square)](https://github.com/ohmyopensource/ohmyuniversity-desktop)
+[![API](https://img.shields.io/badge/api-service-orange?style=flat-square)](https://github.com/ohmyopensource/ohmyuniversity-api)
 
 Welcome to the official documentation repository of **OhMyUniversity!**, an open source project from **OhMyOpenSource!**, that aggregates, normalizes, and makes accessible data and services from the Italian and European university ecosystem.
 
-> 📖 **Documentation site:** [docs.university.ohmyopensource.org](https://docs.university.ohmyopensource.org)
+> **Documentation site:** [docs.university.ohmyopensource.org](https://docs.university.ohmyopensource.org)
 
 This repository does not contain code: it serves as the central reference point for anyone who wants to contribute, integrate, or understand how the OhMyUniversity! ecosystem works.
 
